@@ -1,4 +1,4 @@
-package batalha.naval;
+package BatalhaNaval;
 
 public class Tiro {
 

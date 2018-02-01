@@ -1,9 +1,9 @@
-package batalha.naval;
+package BatalhaNaval;
 
-import batalha.naval.Barcos.Cruzador;
-import batalha.naval.Barcos.Destruidor;
-import batalha.naval.Barcos.NaviodeGuerra;
-import batalha.naval.Barcos.PortaAvioes;
+import BatalhaNaval.Barcos.Cruzador;
+import BatalhaNaval.Barcos.Destruidor;
+import BatalhaNaval.Barcos.NaviodeGuerra;
+import BatalhaNaval.Barcos.PortaAvioes;
 import java.util.Scanner;
 
 
