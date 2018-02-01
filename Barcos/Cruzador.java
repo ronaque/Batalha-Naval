@@ -1,5 +1,5 @@
-package batalha.naval.Barcos;
-import batalha.naval.Interface;
+package BatalhaNaval.Barcos;
+import BatalhaNaval.Interface;
 
 public class Cruzador {
     public static Interface in = new Interface();
