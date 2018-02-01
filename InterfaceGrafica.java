@@ -9,7 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-
+import javafx.scene.layout.HBox;
 
 public class InterfaceGrafica extends Application{
     public static void main(String[] args) {
@@ -94,7 +94,43 @@ public class InterfaceGrafica extends Application{
         grid.setHgap(4);
         grid.setPadding(new Insets(20, 20, 20, 20));
         grid.setAlignment(Pos.TOP_LEFT);
-         
+        
+        Button exitT = new Button("Sair");
+        exitT.setOnAction(e -> {
+            Sone.setWidth(480);
+            Sone.setHeight(520);
+            Sone.setTitle("Batalha Naval");
+            Sone.setScene(Principal);
+        });
+        exitT.setAlignment(Pos.BOTTOM_RIGHT);
+        
+        HBox xtab = new HBox(26);
+        Label x1 = new Label("1");
+        Label x2 = new Label("2");
+        Label x3 = new Label("3");
+        Label x4 = new Label("4");
+        Label x5 = new Label("5");
+        Label x6 = new Label("6");
+        Label x7 = new Label("7");
+        Label x8 = new Label("8");
+        xtab.getChildren().addAll(x1, x2, x3, x4, x5, x6, x7, x8);
+        xtab.setAlignment(Pos.TOP_LEFT);
+        xtab.setPadding(new Insets(10, 0, 0, 46));
+        xtab.setStyle("-fx-font-size: 24");
+        
+        VBox ytab = new VBox(20);
+        Label y1 = new Label("A");
+        Label y2 = new Label("B");
+        Label y3 = new Label("C");
+        Label y4 = new Label("D");
+        Label y5 = new Label("E");
+        Label y6 = new Label("F");
+        Label y7 = new Label("G");
+        Label y8 = new Label("H");
+        ytab.getChildren().addAll(y1, y2, y3, y4, y5, y6, y7, y8);
+        ytab.setPadding(new Insets(23, 0, 0, 10));
+        ytab.setStyle("-fx-font-size: 14");
+        
         for(int x = 0; x < Interface.getGridh(); x++){
             for (int y = 0; y < Interface.getGridv(); y++){
                 Button buttong = new Button();
@@ -118,9 +154,12 @@ public class InterfaceGrafica extends Application{
         Button portaavioes = new Button("Porta Aviões");
         
         Planes.setPadding(new Insets(80, 20, 20, 20));
-        
         Planes.getChildren().addAll(destruidor, cruzador, naviodeguerra, portaavioes);
-        border.setLeft(grid);
+        
+        border.setLeft(exitT);
+        border.setLeft(ytab);
+        border.setTop(xtab);
+        border.setCenter(grid);
         border.setRight(Planes);
         Player1 = new Scene(border);
     }
